@@ -1,11 +1,11 @@
-> Just a repository for my embedded development course
 
 # 嵌入式开发 DOL
 [TOC]
 
 ## Description
 Distributed Operation Layer :
-The distributed operation layer (DOL) is a software development framework to program parallel applications. The DOL allows to specify applications based on the Kahn process network model of computation and features a simulation engine based on SystemC. Moreover, the DOL provides an XML-based specification format to describe the implementation of a parallel application on a multi-processor systems, including binding and mapping
+
+The distributed operation layer (DOL) is a software development framework to program parallel applications. The DOL allows to specify applications based on the Kahn process network model of computation and features a simulation engine based on SystemC. Moreover, the DOL provides an XML-based specification format to describe the implementation of a parallel application on a multi-processor systems, including binding and mapping
 
 ## How to install
 ### Setup environments & get files:
@@ -48,13 +48,15 @@ vim build_zip.xml
 Find the following text and change it (where YYY is the path we marked down just now).
 
 ```
-<property name="systemc.inc" value="YYY/include"/><property name="systemc.lib" value="YYY/lib-linux/libsystemc.a"/>
+<property name="systemc.inc" value="YYY/include"/>
+<property name="systemc.lib" value="YYY/lib-linux/libsystemc.a"/>
 ```
 
 *Notice: if your computer runs in 64-bits, you may need to change `lib-linux` to `lib-linux64`*
 
 ```
-ant -f build_zip.xml all```
+ant -f build_zip.xml all
+```
 
 
 After finishing install, you can run a simple example to ensure it all work well.
